@@ -23,4 +23,7 @@ def procesar_archivo():
                 
                 with open("error.log", "a") as log:
                     log.write(f"Error al procesar usuario: {e}\n")
+            finally:
+                if log is not None:
+                    log.close()        
     return usuarios
