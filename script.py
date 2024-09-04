@@ -39,5 +39,5 @@ def procesar_archivo(ruta):
     return usuarios
 
 
-#for i in usuarios:
-print(procesar_archivo("usuarios.txt"))
+
+procesar_archivo("usuarios.txt")
