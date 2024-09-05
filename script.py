@@ -1,10 +1,26 @@
 import json
-
 from usuario import Usuario
 from datetime import datetime
 
-
 def procesar_archivo(ruta):
+    """
+    Procesa un archivo de texto que contiene datos de usuarios en formato JSON.
+
+    Esta función lee un archivo línea por línea, intenta parsear cada línea como JSON
+    para crear objetos Usuario, y maneja los errores que puedan ocurrir durante el proceso.
+
+    Args:
+        ruta (str): La ruta al archivo que se va a procesar.
+
+    Returns:
+        list: Una lista de objetos Usuario creados a partir de los datos del archivo.
+
+    Raises:
+        Exception: Si hay un error al abrir o procesar el archivo.
+
+    Note:
+        Los errores se registran en un archivo 'error.log'.
+    """
     usuarios = []
     archivo = None
     log = None
@@ -37,7 +53,5 @@ def procesar_archivo(ruta):
         if archivo is not None:
             archivo.close()
     return usuarios
-
-
 
 procesar_archivo("usuarios.txt")
