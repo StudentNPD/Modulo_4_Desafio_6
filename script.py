@@ -54,4 +54,4 @@ def procesar_archivo(ruta):
             archivo.close()
     return usuarios
 
-procesar_archivo("usuarios.txt")
+(procesar_archivo("usuarios.txt"))
