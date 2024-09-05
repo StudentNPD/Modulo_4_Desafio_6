@@ -40,7 +40,7 @@ def procesar_archivo(ruta):
                 except Exception as e:
                     fecha_actual = datetime.now()
                     with open("error.log", "a") as log:
-                        log.write(f"Error al procesar usuario: {e}\n")
+                        log.write(f"{fecha_actual} : Error al procesar usuario: {e}\n")
                 finally:
                     if log is not None:
                         log.close()
@@ -48,7 +48,7 @@ def procesar_archivo(ruta):
         fecha_actual = datetime.now()
         #print(fecha_actual)
         with open("error.log", "a") as log:
-            log.write(f"Error al procesar usuario: {e}\n")
+            log.write(f"{fecha_actual} : Error al procesar usuario: {e}\n")
     finally:
         if archivo is not None:
             archivo.close()
